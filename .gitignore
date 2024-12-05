@@ -1,0 +1,5 @@
+.venv
+.env
+d3_code/node_modules
+d3_code/package-lock.json
+d3_code/package.json
