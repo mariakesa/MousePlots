@@ -70,7 +70,7 @@ svg.append("text")
     .attr("text-anchor", "middle")
     .style("font-family", "sans-serif")
     .style("font-size", "14px")
-    .text("X Axis Label");
+    .text("Vision Transformer embedding dimension");
 
 // Add Y axis label
 svg.append("text")
@@ -80,7 +80,7 @@ svg.append("text")
     .attr("text-anchor", "middle")
     .style("font-family", "sans-serif")
     .style("font-size", "14px")
-    .text("Y Axis Label");
+    .text("Deconvolve calcium event values");
 
 // Add a title
 svg.append("text")
@@ -90,7 +90,7 @@ svg.append("text")
     .style("font-family", "sans-serif")
     .style("font-size", "20px")
     .style("font-weight", "bold")
-    .text("My Scatter Plot");
+    //.text("My Scatter Plot");
 
 // Save the SVG to a file
 fs.writeFileSync('/home/maria/MousePlots/svg/scatter_plot.svg', dom.window.document.querySelector("svg").outerHTML);
