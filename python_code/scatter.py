@@ -73,3 +73,21 @@ print(ds.shape)
 
 plt.scatter(movie_one[:,0],ds[6])
 plt.show()
+
+import json
+
+# Extract the x and y values from your data
+x_values = movie_one[:, 0]
+y_values = ds[6]
+
+# Ensure the values are in a list and convert to native Python types for JSON serialization
+data = [{'x': float(x), 'y': float(y)} for x, y in zip(x_values, y_values)]
+
+# Specify the path where you want to save the JSON file
+json_file_path = '/home/maria/MousePlots/plot_data/scatter1.json'
+
+# Write the data to a JSON file
+with open(json_file_path, 'w') as json_file:
+    json.dump(data, json_file)
+
+print(f"Data has been saved to {json_file_path}")
