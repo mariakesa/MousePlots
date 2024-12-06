@@ -1,2 +1,16 @@
 Saving SVG files
 https://medium.com/@92sharmasaurabh/generate-svg-files-using-nodejs-d3-647d5b4f56eb
+
+Transforming SVG to PDF
+inkscape --export-type=pdf scatter_plot.svg
+
+Include pdf in Overleaf
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{scatter_plot.pdf}
+  \caption{Scatter plot generated from D3 data.}
+  \label{fig:scatter_plot}
+\end{figure}
+
+Learn d3js
+https://2019.wattenberger.com/blog/d3

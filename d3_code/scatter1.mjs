@@ -7,8 +7,10 @@ const data = JSON.parse(fs.readFileSync('/home/maria/MousePlots/plot_data/scatte
 
 // Set up dimensions and margins
 const margin = { top: 40, right: 30, bottom: 50, left: 60 };
-const width = 800 - margin.left - margin.right;
-const height = 600 - margin.top - margin.bottom;
+const scale = { width: 800, height: 600 };
+
+const width = scale.width - margin.left - margin.right;
+const height = scale.height - margin.top - margin.bottom;
 
 // Create a JSDOM instance to emulate a DOM environment
 const dom = new JSDOM(`<!DOCTYPE html><html><body></body></html>`);
@@ -35,8 +37,8 @@ const yScale = d3.scaleLinear()
     .range([height, 0]);
 
 // Define axes
-const xAxis = d3.axisBottom(xScale).ticks(10);
-const yAxis = d3.axisLeft(yScale).ticks(10);
+const xAxis = d3.axisBottom(xScale).ticks(5);
+const yAxis = d3.axisLeft(yScale).ticks(5);
 
 // Add the X axis
 svg.append("g")
